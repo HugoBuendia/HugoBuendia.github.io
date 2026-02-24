@@ -1,0 +1,368 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<Layout title="Hugo Buendia | Proyecto Musical">
+<Hero />
+
+<section id="bio" class="section bio-section">
+<div class="container bio-container">
+<div class="bio-image fade-in-scroll">
+<img src="/gallery/Paula_Agari_DSC_9766.jpg" alt="Hugo Buendia Retrato" />
+</div>
+<div class="bio-text fade-in-scroll">
+<h2 class="section-title">De las calles<br/><span class="text-accent">al estudio</span></h2>
+<p>
+Ex Sensafilo. Un viaje sonoro que atraviesa Ecuador, Buenos Aires y CDMX.
+</p>
+<p>
+La música de Hugo Buendía es un reflejo de la vida urbana nocturna: cruda, melancólica, pero siempre con un groove innegable que te hace mover la cabeza en la oscuridad.
+</p>
+</div>
+</div>
+</section>
+
+<section id="musica" class="section music-section">
+<div class="container">
+<h2 class="section-title fade-in-scroll">Lanzamientos</h2>
+<div class="track-list">
+<a href="#" class="track-item fade-in-scroll">
+<div class="track-info">
+<span class="track-number">01</span>
+<h3 class="track-title">Ecos del Silencio</h3>
+</div>
+<span class="track-year">2025</span>
+</a>
+<a href="#" class="track-item fade-in-scroll">
+<div class="track-info">
+<span class="track-number">02</span>
+<h3 class="track-title">Luces de Neón</h3>
+</div>
+<span class="track-year">2025</span>
+</a>
+<a href="#" class="track-item fade-in-scroll">
+<div class="track-info">
+<span class="track-number">03</span>
+<h3 class="track-title">Fragilidad</h3>
+</div>
+<span class="track-year">2024</span>
+</a>
+<a href="#" class="track-item fade-in-scroll">
+<div class="track-info">
+<span class="track-number">04</span>
+<h3 class="track-title">Noches en Vela</h3>
+</div>
+<span class="track-year">2024</span>
+</a>
+</div>
+</div>
+</section>
+
+<section id="galeria" class="section gallery-section">
+<div class="container">
+<h2 class="section-title fade-in-scroll">Visuales</h2>
+<div class="gallery-grid">
+<div class="gallery-item fade-in-scroll">
+<img src="/gallery/Paula_Agari_DSC_9775.jpg" alt="Visual 1" loading="lazy" />
+</div>
+<div class="gallery-item fade-in-scroll">
+<img src="/gallery/Paula_Agari_DSC_9776.jpg" alt="Visual 2" loading="lazy" />
+</div>
+<div class="gallery-item fade-in-scroll">
+<img src="/gallery/Paula_Agari_DSC_9778.jpg" alt="Visual 3" loading="lazy" />
+</div>
+<div class="gallery-item fade-in-scroll">
+<img src="/gallery/Paula_Agari_DSC_9787.jpg" alt="Visual 4" loading="lazy" />
+</div>
+<div class="gallery-item fade-in-scroll">
+<img src="/gallery/Paula_Agari_DSC_9789.jpg" alt="Visual 5" loading="lazy" />
+</div>
+</div>
+</div>
+</section>
+
+<section id="contacto" class="section contact-section">
+<div class="container contact-container">
+<h2 class="section-title fade-in-scroll">Contacto</h2>
+<div class="contact-content fade-in-scroll">
+<p class="contact-text">Para booking, prensa o colaboraciones.</p>
+<a href="mailto:contacto@hugobuendia.com" class="email-link">contacto@hugobuendia.com</a>
+
+<div class="social-links">
+<a href="#" target="_blank">Spotify</a>
+<a href="#" target="_blank">Instagram</a>
+<a href="#" target="_blank">YouTube</a>
+</div>
+
+<a href="/EPK.pdf" class="epk-btn" download>Descargar EPK</a>
+</div>
+</div>
+</section>
+</Layout>
+
+<style>
+.section-title {
+font-size: clamp(3rem, 8vw, 6rem);
+color: var(--color-text);
+margin-bottom: 4rem;
+opacity: 0.9;
+position: relative;
+display: inline-block;
+line-height: 1;
+}
+
+.text-accent {
+color: var(--color-accent);
+}
+
+/* Bio Section */
+.bio-container {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 6rem;
+align-items: center;
+}
+
+.bio-text p {
+font-size: clamp(1.2rem, 2vw, 1.8rem);
+margin-bottom: 2rem;
+color: rgba(232, 227, 223, 0.8);
+max-width: 600px;
+}
+
+.bio-image {
+position: relative;
+}
+
+.bio-image::before {
+content: '';
+position: absolute;
+top: -20px;
+left: -20px;
+width: 100%;
+height: 100%;
+border: 1px solid var(--color-accent);
+z-index: -1;
+}
+
+.bio-image img {
+width: 100%;
+height: auto;
+filter: grayscale(100%) contrast(1.1);
+transition: filter 0.5s ease;
+}
+
+.bio-image:hover img {
+filter: grayscale(0%) contrast(1.1);
+}
+
+/* Music Section */
+.track-list {
+display: flex;
+flex-direction: column;
+border-top: 2px solid var(--color-border);
+}
+
+.track-item {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 2rem 0;
+border-bottom: 2px solid var(--color-border);
+transition: all 0.3s ease;
+}
+
+.track-info {
+display: flex;
+align-items: baseline;
+gap: 2rem;
+}
+
+.track-number {
+font-family: var(--font-display);
+font-size: 1.5rem;
+color: var(--color-accent);
+}
+
+.track-title {
+font-size: clamp(2rem, 4vw, 4rem);
+margin: 0;
+transition: transform 0.3s ease;
+}
+
+.track-year {
+font-family: var(--font-display);
+font-size: 1.2rem;
+opacity: 0.5;
+}
+
+.track-item:hover {
+background-color: var(--color-text);
+color: var(--color-bg);
+padding: 2rem 1rem;
+}
+
+.track-item:hover .track-title {
+transform: translateX(20px);
+}
+
+.track-item:hover .track-number {
+color: var(--color-bg);
+}
+
+/* Gallery Section */
+.gallery-grid {
+display: grid;
+grid-template-columns: repeat(12, 1fr);
+gap: 2rem;
+}
+
+.gallery-item {
+position: relative;
+overflow: hidden;
+}
+
+.gallery-item img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+filter: grayscale(100%);
+transition: transform 0.7s ease, filter 0.7s ease;
+}
+
+.gallery-item:hover img {
+transform: scale(1.05);
+filter: grayscale(0%);
+}
+
+.gallery-item:nth-child(1) { grid-column: 1 / 8; grid-row: 1 / 3; }
+.gallery-item:nth-child(2) { grid-column: 8 / 13; grid-row: 1 / 2; }
+.gallery-item:nth-child(3) { grid-column: 8 / 13; grid-row: 2 / 4; }
+.gallery-item:nth-child(4) { grid-column: 1 / 5; grid-row: 3 / 4; }
+.gallery-item:nth-child(5) { grid-column: 5 / 8; grid-row: 3 / 4; }
+
+/* Contact Section */
+.contact-container {
+text-align: center;
+padding-bottom: 8rem;
+}
+
+.contact-text {
+font-size: 1.5rem;
+margin-bottom: 1rem;
+opacity: 0.7;
+}
+
+.email-link {
+display: block;
+font-family: var(--font-display);
+font-size: clamp(2rem, 5vw, 5rem);
+color: var(--color-accent);
+margin-bottom: 4rem;
+word-break: break-all;
+}
+
+.email-link:hover {
+color: var(--color-text);
+}
+
+.social-links {
+display: flex;
+justify-content: center;
+gap: 3rem;
+margin-bottom: 4rem;
+font-family: var(--font-display);
+font-size: 1.5rem;
+text-transform: uppercase;
+}
+
+.epk-btn {
+display: inline-block;
+padding: 1.5rem 4rem;
+border: 2px solid var(--color-text);
+font-family: var(--font-display);
+font-size: 1.5rem;
+text-transform: uppercase;
+letter-spacing: 0.1em;
+background: transparent;
+color: var(--color-text);
+transition: all 0.3s ease;
+position: relative;
+overflow: hidden;
+}
+
+.epk-btn::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: var(--color-accent);
+transform: translateY(100%);
+transition: transform 0.3s ease;
+z-index: -1;
+}
+
+.epk-btn:hover {
+color: var(--color-bg);
+border-color: var(--color-accent);
+}
+
+.epk-btn:hover::before {
+transform: translateY(0);
+}
+
+/* Scroll Animations */
+.fade-in-scroll {
+opacity: 0;
+transform: translateY(40px);
+transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-scroll.visible {
+opacity: 1;
+transform: translateY(0);
+}
+
+@media (max-width: 992px) {
+.bio-container {
+grid-template-columns: 1fr;
+gap: 4rem;
+}
+
+.gallery-grid {
+display: flex;
+flex-direction: column;
+}
+
+.social-links {
+flex-direction: column;
+gap: 1.5rem;
+}
+}
+</style>
+
+<script>
+// Intersection Observer for scroll animations
+const observerOptions = {
+root: null,
+rootMargin: '0px',
+threshold: 0.15
+};
+
+const observer = new IntersectionObserver((entries, observer) => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+entry.target.classList.add('visible');
+observer.unobserve(entry.target);
+}
+});
+}, observerOptions);
+
+document.addEventListener('DOMContentLoaded', () => {
+const elements = document.querySelectorAll('.fade-in-scroll');
+elements.forEach(el => observer.observe(el));
+});
+</script>
