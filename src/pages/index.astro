@@ -119,12 +119,21 @@ loading="lazy"
 <div id="newsletter" class="newsletter-signup fade-in-scroll">
 <h3 class="newsletter-title">Sign up al newsletter</h3>
 <p class="newsletter-copy">Recibe lanzamientos, fechas en vivo y novedades directo en tu correo.</p>
-<form id="newsletter-form" class="newsletter-form" novalidate>
+<form
+id="newsletter-form"
+class="newsletter-form"
+action="https://gmail.us12.list-manage.com/subscribe/post?u=e2960f958d2cf425a0ea40140&id=063304db36&f_id=009fe4e0f0"
+method="post"
+target="_blank"
+>
 <label for="newsletter-email" class="visually-hidden">Correo electrónico</label>
-<input id="newsletter-email" name="email" type="email" placeholder="tu@email.com" autocomplete="email" required />
+<input id="newsletter-email" name="EMAIL" type="email" placeholder="tu@email.com" autocomplete="email" required />
+<div class="newsletter-honeypot" aria-hidden="true">
+<input type="text" name="b_e2960f958d2cf425a0ea40140_063304db36" tabindex="-1" value="" autocomplete="off" />
+</div>
 <button type="submit">Suscribirme</button>
 </form>
-<p id="newsletter-feedback" class="newsletter-feedback" role="status" aria-live="polite"></p>
+<p id="newsletter-feedback" class="newsletter-feedback" role="status" aria-live="polite">Al enviar, se abrirá Mailchimp para confirmar tu suscripción.</p>
 </div>
 
 <div class="contact-content fade-in-scroll">
@@ -644,6 +653,11 @@ opacity: 0.85;
 color: var(--color-accent);
 }
 
+.newsletter-honeypot {
+position: absolute;
+left: -5000px;
+}
+
 .visually-hidden {
 position: absolute;
 width: 1px;
@@ -1031,31 +1045,5 @@ bioImage.classList.toggle('is-color');
 });
 }
 
-const newsletterForm = document.getElementById('newsletter-form');
-const newsletterEmailInput = document.getElementById('newsletter-email');
-const newsletterFeedback = document.getElementById('newsletter-feedback');
-
-if (newsletterForm instanceof HTMLFormElement && newsletterEmailInput instanceof HTMLInputElement && newsletterFeedback instanceof HTMLElement) {
-newsletterForm.addEventListener('submit', (event) => {
-event.preventDefault();
-
-const email = newsletterEmailInput.value.trim();
-if (!email || !newsletterEmailInput.validity.valid) {
-newsletterFeedback.textContent = 'Ingresa un correo válido para suscribirte.';
-newsletterFeedback.classList.add('is-error');
-newsletterEmailInput.focus();
-return;
-}
-
-newsletterFeedback.classList.remove('is-error');
-newsletterFeedback.textContent = 'Abriendo tu correo para confirmar la suscripción...';
-
-const subject = encodeURIComponent('Alta newsletter Hugo Buendía');
-const body = encodeURIComponent(`Hola, quiero suscribirme al newsletter.\n\nEmail: ${email}`);
-window.location.href = `mailto:contactohugobuendia@gmail.com?subject=${subject}&body=${body}`;
-
-newsletterForm.reset();
-});
-}
 });
 </script>
