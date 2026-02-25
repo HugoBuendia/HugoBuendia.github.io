@@ -124,7 +124,7 @@ id="newsletter-form"
 class="newsletter-form"
 action="https://gmail.us12.list-manage.com/subscribe/post?u=e2960f958d2cf425a0ea40140&id=063304db36&f_id=009fe4e0f0"
 method="post"
-target="_blank"
+target="mailchimp-hidden-target"
 >
 <label for="newsletter-email" class="visually-hidden">Correo electrónico</label>
 <input id="newsletter-email" name="EMAIL" type="email" placeholder="tu@email.com" autocomplete="email" required />
@@ -133,7 +133,8 @@ target="_blank"
 </div>
 <button type="submit">Suscribirme</button>
 </form>
-<p id="newsletter-feedback" class="newsletter-feedback" role="status" aria-live="polite">Al enviar, se abrirá Mailchimp para confirmar tu suscripción.</p>
+<iframe name="mailchimp-hidden-target" class="newsletter-target-frame" title="Mailchimp hidden target"></iframe>
+<p id="newsletter-feedback" class="newsletter-feedback" role="status" aria-live="polite">Suscríbete para recibir novedades en tu correo.</p>
 </div>
 
 <div class="contact-content fade-in-scroll">
@@ -653,9 +654,23 @@ opacity: 0.85;
 color: var(--color-accent);
 }
 
+.newsletter-feedback.is-success {
+color: var(--color-accent);
+}
+
 .newsletter-honeypot {
 position: absolute;
 left: -5000px;
+}
+
+.newsletter-target-frame {
+position: absolute;
+left: -5000px;
+width: 1px;
+height: 1px;
+border: 0;
+opacity: 0;
+pointer-events: none;
 }
 
 .visually-hidden {
@@ -1042,6 +1057,29 @@ if (event.key === 'Enter' || event.key === ' ') {
 event.preventDefault();
 bioImage.classList.toggle('is-color');
 }
+});
+}
+
+const newsletterForm = document.getElementById('newsletter-form');
+const newsletterEmailInput = document.getElementById('newsletter-email');
+const newsletterFeedback = document.getElementById('newsletter-feedback');
+
+if (newsletterForm instanceof HTMLFormElement && newsletterEmailInput instanceof HTMLInputElement && newsletterFeedback instanceof HTMLElement) {
+newsletterForm.addEventListener('submit', (event) => {
+if (!newsletterEmailInput.validity.valid) {
+event.preventDefault();
+newsletterFeedback.classList.remove('is-success');
+newsletterFeedback.classList.add('is-error');
+newsletterFeedback.textContent = 'Ingresa un correo válido para suscribirte.';
+return;
+}
+
+newsletterFeedback.classList.remove('is-error');
+newsletterFeedback.classList.add('is-success');
+newsletterFeedback.textContent = 'Gracias, estamos en contacto 💛';
+setTimeout(() => {
+newsletterForm.reset();
+}, 250);
 });
 }
 
