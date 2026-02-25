@@ -9,7 +9,7 @@ import Hero from '../components/Hero.astro';
 <section id="bio" class="section bio-section">
 <div class="container bio-container">
 <div class="bio-image fade-in-scroll" tabindex="0">
-<img src="/gallery/Paula_Agari_DSC_9820.jpg" alt="Hugo Buendia Retrato" />
+<img src="/gallery/Paula_Agari_DSC_9820.webp" alt="Hugo Buendia Retrato" />
 </div>
 <div class="bio-text fade-in-scroll">
 <h2 class="section-title">Bio</h2>
@@ -29,7 +29,7 @@ La música de Hugo Buendía es un reflejo de la vida urbana nocturna: cruda, mel
 <div class="track-list">
 <a href="#" class="track-item fade-in-scroll" data-open-vagabundo-popup aria-haspopup="dialog" aria-controls="vagabundo-popup">
 <div class="track-cover">
-<img src="/gallery/HUGO%20BUENDIA.png" alt="Vagabundo" />
+<img src="/gallery/Vagabundo.webp" alt="Vagabundo" />
 </div>
 <div class="track-info">
 <h3 class="track-title">Vagabundo</h3>
@@ -47,7 +47,7 @@ La música de Hugo Buendía es un reflejo de la vida urbana nocturna: cruda, mel
 <div class="listen-popup-backdrop" data-close-vagabundo-popup></div>
 <div class="listen-popup-dialog" role="dialog" aria-modal="true" aria-labelledby="vagabundo-popup-title">
 <button type="button" class="listen-popup-close" aria-label="Cerrar" data-close-vagabundo-popup>×</button>
-<h3 id="vagabundo-popup-title" class="listen-popup-title">Escuchar “Vagabundo”</h3>
+<h3 id="vagabundo-popup-title" class="listen-popup-title">Escucha Vagabundo</h3>
 <div class="listen-popup-links">
 <a href="https://open.spotify.com/track/61fOLKkjwrHNZ2YtgAPiNt?si=9598be9ebf21459c" target="_blank" rel="noopener noreferrer" aria-label="Escuchar en Spotify">
 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.6 14.6c-.17.28-.53.37-.8.2-2.2-1.34-4.97-1.64-8.23-.9-.3.07-.6-.12-.67-.42-.07-.3.12-.6.42-.67 3.55-.8 6.6-.46 9.08 1.05.27.16.36.52.2.8zm1.14-3.2c-.22.35-.66.46-1.02.24-2.52-1.55-6.36-1.9-9.34-1.04-.4.12-.8-.12-.92-.52-.12-.4.12-.8.52-.92 3.4-1 7.7-.6 10.52 1.14.36.22.47.67.24 1.02zm.1-3.35c-3.02-1.8-8-1.96-10.88-1.08-.48.15-.98-.12-1.13-.6-.15-.48.12-.98.6-1.13 3.35-1 8.9-.8 12.4 1.3.43.26.58.83.32 1.26-.26.43-.83.58-1.26.32z"/></svg>
@@ -390,7 +390,7 @@ overflow: hidden;
 content: '';
 position: absolute;
 inset: 0;
-background-image: url('/gallery/HUGO%20BUENDIA.png');
+background-image: url('/gallery/Vagabundo.webp');
 background-size: cover;
 background-position: center 35%;
 filter: grayscale(100%) brightness(0.35);
@@ -837,6 +837,10 @@ color: rgba(232, 227, 223, 0.95);
 
 .visual-carousel {
 grid-template-columns: 1fr;
+}
+
+.gallery-item img {
+filter: grayscale(0%);
 }
 
 .carousel-btn {
