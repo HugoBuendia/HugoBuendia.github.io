@@ -110,6 +110,9 @@ loading="lazy"
 <button class="carousel-btn carousel-btn-next" type="button" aria-label="Siguiente visual">›</button>
 <div class="carousel-dots" aria-hidden="true"></div>
 </div>
+<p class="gallery-credit fade-in-scroll">
+<a href="https://www.instagram.com/agari_____/" target="_blank" rel="noopener noreferrer" aria-label="Fotos por Paula Agari en Instagram">Fotos por Paula Agari</a>
+</p>
 </div>
 </section>
 
@@ -566,6 +569,24 @@ transform: scale(1.05);
 filter: grayscale(0%);
 }
 
+.gallery-credit {
+margin-top: 1rem;
+font-size: 1rem;
+letter-spacing: 0.04em;
+text-align: center;
+opacity: 0.8;
+}
+
+.gallery-credit a {
+color: var(--color-accent);
+text-decoration: underline;
+text-underline-offset: 0.2rem;
+}
+
+.gallery-credit a:hover {
+opacity: 0.9;
+}
+
 /* Contact Section */
 .contact-container {
 text-align: center;
@@ -870,6 +891,10 @@ align-items: stretch;
 flex: 0 0 auto;
 max-width: none;
 width: 100%;
+}
+
+.gallery-credit {
+font-size: 0.95rem;
 }
 }
 
