@@ -117,8 +117,8 @@ loading="lazy"
 <div class="container contact-container">
 <h2 class="section-title fade-in-scroll">Contacto</h2>
 <div id="newsletter" class="newsletter-signup fade-in-scroll">
-<h3 class="newsletter-title">Sign up al newsletter</h3>
-<p class="newsletter-copy">Recibe lanzamientos, fechas en vivo y novedades directo en tu correo.</p>
+<h3 class="newsletter-title">Suscríbete al newsletter</h3>
+<p class="newsletter-copy">Enterate de lanzamientos, fechas en vivo y novedades antes que nadie!</p>
 <form
 id="newsletter-form"
 class="newsletter-form"
@@ -134,7 +134,7 @@ target="mailchimp-hidden-target"
 <button type="submit">Suscribirme</button>
 </form>
 <iframe name="mailchimp-hidden-target" class="newsletter-target-frame" title="Mailchimp hidden target"></iframe>
-<p id="newsletter-feedback" class="newsletter-feedback" role="status" aria-live="polite">Suscríbete para recibir novedades en tu correo.</p>
+<p id="newsletter-feedback" class="newsletter-feedback" role="status" aria-live="polite"></p>
 </div>
 
 <div class="contact-content fade-in-scroll">
@@ -648,6 +648,10 @@ min-height: 1.5em;
 margin-top: 0.8rem;
 font-size: 1rem;
 opacity: 0.85;
+}
+
+.newsletter-feedback:empty {
+display: none;
 }
 
 .newsletter-feedback.is-error {
