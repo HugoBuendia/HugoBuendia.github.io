@@ -8,11 +8,11 @@ import Hero from '../components/Hero.astro';
 
 <section id="bio" class="section bio-section">
 <div class="container bio-container">
-<div class="bio-image fade-in-scroll">
-<img src="/gallery/Paula_Agari_DSC_9766.jpg" alt="Hugo Buendia Retrato" />
+<div class="bio-image fade-in-scroll" tabindex="0">
+<img src="/gallery/Paula_Agari_DSC_9820.jpg" alt="Hugo Buendia Retrato" />
 </div>
 <div class="bio-text fade-in-scroll">
-<h2 class="section-title">De las calles<br/><span class="text-accent">al estudio</span></h2>
+<h2 class="section-title">Bio</h2>
 <p>
 Ex Sensafilo. Un viaje sonoro que atraviesa Ecuador, Buenos Aires y CDMX.
 </p>
@@ -25,59 +25,90 @@ La música de Hugo Buendía es un reflejo de la vida urbana nocturna: cruda, mel
 
 <section id="musica" class="section music-section">
 <div class="container">
-<h2 class="section-title fade-in-scroll">Lanzamientos</h2>
+<h2 class="section-title fade-in-scroll">Música</h2>
 <div class="track-list">
-<a href="#" class="track-item fade-in-scroll">
-<div class="track-info">
-<span class="track-number">01</span>
-<h3 class="track-title">Ecos del Silencio</h3>
+<a href="#" class="track-item fade-in-scroll" data-open-vagabundo-popup aria-haspopup="dialog" aria-controls="vagabundo-popup">
+<div class="track-cover">
+<img src="/gallery/HUGO%20BUENDIA.png" alt="Vagabundo" />
 </div>
+<div class="track-info">
+<h3 class="track-title">Vagabundo</h3>
 <span class="track-year">2025</span>
-</a>
-<a href="#" class="track-item fade-in-scroll">
-<div class="track-info">
-<span class="track-number">02</span>
-<h3 class="track-title">Luces de Neón</h3>
 </div>
-<span class="track-year">2025</span>
-</a>
-<a href="#" class="track-item fade-in-scroll">
-<div class="track-info">
-<span class="track-number">03</span>
-<h3 class="track-title">Fragilidad</h3>
+<div class="track-play">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="play-icon"><polygon points="6 3 20 12 6 21 6 3"></polygon></svg>
 </div>
-<span class="track-year">2024</span>
 </a>
-<a href="#" class="track-item fade-in-scroll">
-<div class="track-info">
-<span class="track-number">04</span>
-<h3 class="track-title">Noches en Vela</h3>
 </div>
-<span class="track-year">2024</span>
+</div>
+</section>
+
+<div id="vagabundo-popup" class="listen-popup" hidden>
+<div class="listen-popup-backdrop" data-close-vagabundo-popup></div>
+<div class="listen-popup-dialog" role="dialog" aria-modal="true" aria-labelledby="vagabundo-popup-title">
+<button type="button" class="listen-popup-close" aria-label="Cerrar" data-close-vagabundo-popup>×</button>
+<h3 id="vagabundo-popup-title" class="listen-popup-title">Escuchar “Vagabundo”</h3>
+<div class="listen-popup-links">
+<a href="https://open.spotify.com/track/61fOLKkjwrHNZ2YtgAPiNt?si=9598be9ebf21459c" target="_blank" rel="noopener noreferrer" aria-label="Escuchar en Spotify">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.6 14.6c-.17.28-.53.37-.8.2-2.2-1.34-4.97-1.64-8.23-.9-.3.07-.6-.12-.67-.42-.07-.3.12-.6.42-.67 3.55-.8 6.6-.46 9.08 1.05.27.16.36.52.2.8zm1.14-3.2c-.22.35-.66.46-1.02.24-2.52-1.55-6.36-1.9-9.34-1.04-.4.12-.8-.12-.92-.52-.12-.4.12-.8.52-.92 3.4-1 7.7-.6 10.52 1.14.36.22.47.67.24 1.02zm.1-3.35c-3.02-1.8-8-1.96-10.88-1.08-.48.15-.98-.12-1.13-.6-.15-.48.12-.98.6-1.13 3.35-1 8.9-.8 12.4 1.3.43.26.58.83.32 1.26-.26.43-.83.58-1.26.32z"/></svg>
+<span>Spotify</span>
 </a>
+<a href="https://music.apple.com/ar/album/vagabundo/1836640974?i=1836640975" target="_blank" rel="noopener noreferrer" aria-label="Escuchar en Apple Music">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V7l10-2v11"/><circle cx="6" cy="18" r="3"/><circle cx="16" cy="16" r="3"/></svg>
+<span>Apple Music</span>
+</a>
+<a href="https://youtu.be/sZqfJHDdUe8?si=-vgMXqZ54UlxZs2F" target="_blank" rel="noopener noreferrer" aria-label="Escuchar en YouTube">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.1C2.6 5.9 3.5 5 4.7 4.9 7.1 4.6 12 4.6 12 4.6s4.9 0 7.3.3c1.2.1 2.1 1 2.2 2.2.3 2.4.3 4.9.3 4.9s0 2.5-.3 4.9c-.1 1.2-1 2.1-2.2 2.2-2.4.3-7.3.3-7.3.3s-4.9 0-7.3-.3c-1.2-.1-2.1-1-2.2-2.2C2.2 14.4 2.2 11.9 2.2 11.9s0-2.5.3-4.8z"/><path d="m10 15 5-3-5-3z"/></svg>
+<span>YouTube</span>
+</a>
+<a href="https://soyhugobuendia.bandcamp.com/track/vagabundo" target="_blank" rel="noopener noreferrer" aria-label="Escuchar en Bandcamp">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17h11l5-10H9L4 17z"/></svg>
+<span>Bandcamp</span>
+</a>
+</div>
+</div>
+</div>
+
+<section id="video" class="section video-section">
+<div class="container">
+<h2 class="section-title fade-in-scroll">Videos</h2>
+<div class="video-wrapper fade-in-scroll">
+<iframe
+src="https://www.youtube.com/embed/sZqfJHDdUe8"
+title="Hugo Buendía - Vagabundo (Video Oficial)"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+referrerpolicy="strict-origin-when-cross-origin"
+allowfullscreen
+loading="lazy"
+></iframe>
 </div>
 </div>
 </section>
 
 <section id="galeria" class="section gallery-section">
 <div class="container">
-<h2 class="section-title fade-in-scroll">Visuales</h2>
-<div class="gallery-grid">
-<div class="gallery-item fade-in-scroll">
+<h2 class="section-title fade-in-scroll">Galeria</h2>
+<div class="visual-carousel fade-in-scroll" aria-label="Carrusel de visuales">
+<button class="carousel-btn carousel-btn-prev" type="button" aria-label="Anterior visual">‹</button>
+<div class="carousel-track" tabindex="0">
+<div class="gallery-item is-slide">
 <img src="/gallery/Paula_Agari_DSC_9775.jpg" alt="Visual 1" loading="lazy" />
 </div>
-<div class="gallery-item fade-in-scroll">
+<div class="gallery-item is-slide">
 <img src="/gallery/Paula_Agari_DSC_9776.jpg" alt="Visual 2" loading="lazy" />
 </div>
-<div class="gallery-item fade-in-scroll">
+<div class="gallery-item is-slide">
 <img src="/gallery/Paula_Agari_DSC_9778.jpg" alt="Visual 3" loading="lazy" />
 </div>
-<div class="gallery-item fade-in-scroll">
+<div class="gallery-item is-slide">
 <img src="/gallery/Paula_Agari_DSC_9787.jpg" alt="Visual 4" loading="lazy" />
 </div>
-<div class="gallery-item fade-in-scroll">
+<div class="gallery-item is-slide">
 <img src="/gallery/Paula_Agari_DSC_9789.jpg" alt="Visual 5" loading="lazy" />
 </div>
+</div>
+<button class="carousel-btn carousel-btn-next" type="button" aria-label="Siguiente visual">›</button>
+<div class="carousel-dots" aria-hidden="true"></div>
 </div>
 </div>
 </section>
@@ -85,17 +116,45 @@ La música de Hugo Buendía es un reflejo de la vida urbana nocturna: cruda, mel
 <section id="contacto" class="section contact-section">
 <div class="container contact-container">
 <h2 class="section-title fade-in-scroll">Contacto</h2>
-<div class="contact-content fade-in-scroll">
-<p class="contact-text">Para booking, prensa o colaboraciones.</p>
-<a href="mailto:contacto@hugobuendia.com" class="email-link">contacto@hugobuendia.com</a>
-
-<div class="social-links">
-<a href="#" target="_blank">Spotify</a>
-<a href="#" target="_blank">Instagram</a>
-<a href="#" target="_blank">YouTube</a>
+<div id="newsletter" class="newsletter-signup fade-in-scroll">
+<h3 class="newsletter-title">Sign up al newsletter</h3>
+<p class="newsletter-copy">Recibe lanzamientos, fechas en vivo y novedades directo en tu correo.</p>
+<form id="newsletter-form" class="newsletter-form" novalidate>
+<label for="newsletter-email" class="visually-hidden">Correo electrónico</label>
+<input id="newsletter-email" name="email" type="email" placeholder="tu@email.com" autocomplete="email" required />
+<button type="submit">Suscribirme</button>
+</form>
+<p id="newsletter-feedback" class="newsletter-feedback" role="status" aria-live="polite"></p>
 </div>
 
-<a href="/EPK.pdf" class="epk-btn" download>Descargar EPK</a>
+<div class="contact-content fade-in-scroll">
+<p class="contact-text">Para booking, prensa o colaboraciones.</p>
+<a href="mailto:contactohugobuendia@gmail.com" class="email-link">contactohugo<wbr />buendia<wbr />@gmail.com</a>
+
+<div class="social-links">
+<a href="https://open.spotify.com/artist/5devkGtk3LisGQRIIOKsUr?utm_medium=share&utm_source=linktree" target="_blank" rel="noopener noreferrer" aria-label="Spotify">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.6 14.6c-.17.28-.53.37-.8.2-2.2-1.34-4.97-1.64-8.23-.9-.3.07-.6-.12-.67-.42-.07-.3.12-.6.42-.67 3.55-.8 6.6-.46 9.08 1.05.27.16.36.52.2.8zm1.14-3.2c-.22.35-.66.46-1.02.24-2.52-1.55-6.36-1.9-9.34-1.04-.4.12-.8-.12-.92-.52-.12-.4.12-.8.52-.92 3.4-1 7.7-.6 10.52 1.14.36.22.47.67.24 1.02zm.1-3.35c-3.02-1.8-8-1.96-10.88-1.08-.48.15-.98-.12-1.13-.6-.15-.48.12-.98.6-1.13 3.35-1 8.9-.8 12.4 1.3.43.26.58.83.32 1.26-.26.43-.83.58-1.26.32z"/></svg>
+</a>
+<a href="https://www.youtube.com/@SoyHugoBuendia" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.1C2.6 5.9 3.5 5 4.7 4.9 7.1 4.6 12 4.6 12 4.6s4.9 0 7.3.3c1.2.1 2.1 1 2.2 2.2.3 2.4.3 4.9.3 4.9s0 2.5-.3 4.9c-.1 1.2-1 2.1-2.2 2.2-2.4.3-7.3.3-7.3.3s-4.9 0-7.3-.3c-1.2-.1-2.1-1-2.2-2.2C2.2 14.4 2.2 11.9 2.2 11.9s0-2.5.3-4.8z"/><path d="m10 15 5-3-5-3z"/></svg>
+</a>
+<a href="https://www.instagram.com/soyhugobuendia" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+</a>
+<a href="https://www.tiktok.com/@soyhugobuendia" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M19.6 8.2a7.8 7.8 0 0 1-4.6-1.5V14a5.9 5.9 0 1 1-5.1-5.8v2.7a3.2 3.2 0 1 0 2.4 3.1V2h2.7a5.1 5.1 0 0 0 4.6 3.4v2.8z"/></svg>
+</a>
+<a href="https://music.apple.com/ar/artist/hugo-buendia/1836285264" target="_blank" rel="noopener noreferrer" aria-label="Apple Music">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V7l10-2v11"/><circle cx="6" cy="18" r="3"/><circle cx="16" cy="16" r="3"/></svg>
+</a>
+<a href="https://soyhugobuendia.bandcamp.com/track/vagabundo" target="_blank" rel="noopener noreferrer" aria-label="Bandcamp">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17h11l5-10H9L4 17z"/></svg>
+</a>
+<a href="https://www.facebook.com/profile.php?id=61574549874603" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M13.5 22v-8h2.7l.4-3.1h-3.1V8.9c0-.9.3-1.5 1.6-1.5h1.7V4.6c-.8-.1-1.7-.2-2.5-.2-2.5 0-4.1 1.5-4.1 4.3v2.2H8.4V14h2.8v8h2.3z"/></svg>
+</a>
+</div>
+
 </div>
 </div>
 </section>
@@ -110,6 +169,17 @@ opacity: 0.9;
 position: relative;
 display: inline-block;
 line-height: 1;
+padding-bottom: 0.9rem;
+}
+
+.section-title::after {
+content: '';
+position: absolute;
+left: 0;
+bottom: 0;
+width: 100%;
+height: 5px;
+background: var(--color-accent);
 }
 
 .text-accent {
@@ -124,6 +194,11 @@ gap: 6rem;
 align-items: center;
 }
 
+.bio-section .section-title {
+font-size: clamp(2.2rem, 5.5vw, 4rem);
+margin-bottom: 2rem;
+}
+
 .bio-text p {
 font-size: clamp(1.2rem, 2vw, 1.8rem);
 margin-bottom: 2rem;
@@ -133,6 +208,10 @@ max-width: 600px;
 
 .bio-image {
 position: relative;
+max-width: 420px;
+width: 100%;
+margin: 0 auto;
+cursor: pointer;
 }
 
 .bio-image::before {
@@ -149,78 +228,319 @@ z-index: -1;
 .bio-image img {
 width: 100%;
 height: auto;
-filter: grayscale(100%) contrast(1.1);
-transition: filter 0.5s ease;
+filter: grayscale(100%) contrast(1.04) brightness(0.96);
+transition: filter 1.2s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.bio-image:hover img {
-filter: grayscale(0%) contrast(1.1);
+.bio-image:hover img,
+.bio-image:focus img,
+.bio-image:active img,
+.bio-image.is-color img {
+filter: grayscale(0%) saturate(1.08) contrast(1.03) brightness(0.99);
 }
 
 /* Music Section */
 .track-list {
 display: flex;
 flex-direction: column;
-border-top: 2px solid var(--color-border);
+gap: 2rem;
 }
 
 .track-item {
 display: flex;
-justify-content: space-between;
+flex-direction: column;
 align-items: center;
-padding: 2rem 0;
-border-bottom: 2px solid var(--color-border);
+gap: 2rem;
+padding: 1.5rem;
+background-color: rgba(17, 17, 17, 0.5);
+border: 1px solid rgba(255, 255, 255, 0.05);
 transition: all 0.3s ease;
 }
 
-.track-info {
-display: flex;
-align-items: baseline;
-gap: 2rem;
+@media (min-width: 768px) {
+.track-item {
+flex-direction: row;
+}
 }
 
-.track-number {
-font-family: var(--font-display);
-font-size: 1.5rem;
-color: var(--color-accent);
+.track-cover {
+width: 100%;
+max-width: 200px;
+aspect-ratio: 1 / 1;
+overflow: hidden;
+flex-shrink: 0;
+}
+
+.track-cover img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+filter: grayscale(0%);
+transition: filter 0.5s ease;
+}
+
+.track-info {
+flex: 1;
+display: flex;
+flex-direction: column;
+text-align: center;
+}
+
+@media (min-width: 768px) {
+.track-info {
+text-align: left;
+}
 }
 
 .track-title {
-font-size: clamp(2rem, 4vw, 4rem);
-margin: 0;
-transition: transform 0.3s ease;
+font-family: var(--font-display);
+font-size: clamp(2rem, 4vw, 3rem);
+margin: 0 0 0.5rem 0;
+text-transform: uppercase;
+color: var(--color-text);
 }
 
 .track-year {
 font-family: var(--font-display);
-font-size: 1.2rem;
-opacity: 0.5;
+font-size: 1rem;
+color: var(--color-text);
+letter-spacing: 0.1em;
+}
+
+.track-play {
+width: 60px;
+height: 60px;
+border-radius: 50%;
+border: 2px solid rgba(255, 255, 255, 0.2);
+display: flex;
+align-items: center;
+justify-content: center;
+flex-shrink: 0;
+transition: all 0.3s ease;
+}
+
+.track-play .play-icon {
+width: 24px;
+height: 24px;
+margin-left: 4px;
+transition: fill 0.3s ease;
 }
 
 .track-item:hover {
+background-color: rgba(26, 26, 26, 0.8);
+border-color: rgba(255, 237, 0, 0.5);
+}
+
+.track-item:hover .track-cover img {
+filter: grayscale(0%);
+}
+
+.track-item:hover .track-play {
 background-color: var(--color-text);
+border-color: var(--color-text);
 color: var(--color-bg);
-padding: 2rem 1rem;
 }
 
-.track-item:hover .track-title {
-transform: translateX(20px);
+.track-item:hover .track-play .play-icon {
+fill: var(--color-bg);
+stroke: var(--color-bg);
 }
 
-.track-item:hover .track-number {
-color: var(--color-bg);
+.listen-popup {
+position: fixed;
+inset: 0;
+z-index: 1000;
+display: grid;
+place-items: center;
+padding: 1rem;
+}
+
+.listen-popup[hidden] {
+display: none;
+}
+
+.listen-popup-backdrop {
+position: absolute;
+inset: 0;
+background: rgba(0, 0, 0, 0.7);
+}
+
+.listen-popup-dialog {
+position: relative;
+z-index: 1;
+width: 100%;
+max-width: 480px;
+padding: 2rem 1.5rem 1.5rem;
+background: var(--color-bg);
+border: 1px solid rgba(255, 255, 255, 0.2);
+overflow: hidden;
+}
+
+.listen-popup-dialog::before {
+content: '';
+position: absolute;
+inset: 0;
+background-image: url('/gallery/HUGO%20BUENDIA.png');
+background-size: cover;
+background-position: center 35%;
+filter: grayscale(100%) brightness(0.35);
+z-index: -2;
+}
+
+.listen-popup-dialog::after {
+content: '';
+position: absolute;
+inset: 0;
+background: linear-gradient(to bottom, rgba(10, 10, 10, 0.65), rgba(10, 10, 10, 0.88));
+z-index: -1;
+}
+
+.listen-popup-close {
+position: absolute;
+top: 0.5rem;
+right: 0.75rem;
+font-size: 2rem;
+line-height: 1;
+background: transparent;
+border: 0;
+color: var(--color-text);
+cursor: pointer;
+}
+
+.listen-popup-title {
+font-family: var(--font-display);
+font-size: clamp(1.4rem, 4vw, 2rem);
+margin: 0 0 1rem;
+text-transform: uppercase;
+letter-spacing: 0.06em;
+}
+
+.listen-popup-links {
+display: flex;
+flex-direction: column;
+gap: 0.75rem;
+}
+
+.listen-popup-links a {
+display: flex;
+align-items: center;
+gap: 0.75rem;
+padding: 0.8rem 1rem;
+border: 1px solid rgba(255, 255, 255, 0.18);
+text-transform: uppercase;
+letter-spacing: 0.06em;
+font-family: var(--font-display);
+transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.listen-popup-links a svg {
+width: 20px;
+height: 20px;
+flex-shrink: 0;
+}
+
+.listen-popup-links a:hover {
+border-color: var(--color-accent);
+color: var(--color-accent);
+}
+
+/* Video Section */
+.video-wrapper {
+position: relative;
+width: 100%;
+max-width: 1100px;
+margin: 0 auto;
+aspect-ratio: 16 / 9;
+border: 1px solid rgba(255, 255, 255, 0.12);
+background: rgba(0, 0, 0, 0.35);
+}
+
+.video-wrapper iframe {
+width: 100%;
+height: 100%;
+border: 0;
+display: block;
 }
 
 /* Gallery Section */
-.gallery-grid {
+.visual-carousel {
+position: relative;
 display: grid;
-grid-template-columns: repeat(12, 1fr);
-gap: 2rem;
+grid-template-columns: auto 1fr auto;
+gap: 1rem;
+align-items: center;
 }
 
 .gallery-item {
 position: relative;
 overflow: hidden;
+}
+
+.carousel-track {
+display: flex;
+overflow-x: auto;
+scroll-snap-type: x mandatory;
+scroll-behavior: smooth;
+gap: 0;
+border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.carousel-track::-webkit-scrollbar {
+display: none;
+}
+
+.is-slide {
+min-width: 100%;
+scroll-snap-align: start;
+display: flex;
+align-items: center;
+justify-content: center;
+background: rgba(0, 0, 0, 0.35);
+}
+
+.gallery-item.is-slide img {
+width: 100%;
+height: auto;
+max-height: 80vh;
+object-fit: contain;
+}
+
+.carousel-btn {
+width: 48px;
+height: 48px;
+border: 1px solid rgba(255, 255, 255, 0.35);
+background: rgba(10, 10, 10, 0.7);
+color: var(--color-text);
+font-size: 2rem;
+line-height: 1;
+cursor: pointer;
+transition: all 0.3s ease;
+}
+
+.carousel-btn:hover {
+border-color: var(--color-accent);
+color: var(--color-accent);
+}
+
+.carousel-dots {
+grid-column: 1 / -1;
+display: flex;
+justify-content: center;
+gap: 0.5rem;
+margin-top: 1rem;
+}
+
+.carousel-dot {
+width: 8px;
+height: 8px;
+border-radius: 50%;
+background: rgba(255, 255, 255, 0.3);
+transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.carousel-dot.is-active {
+background: var(--color-accent);
+transform: scale(1.2);
 }
 
 .gallery-item img {
@@ -236,16 +556,10 @@ transform: scale(1.05);
 filter: grayscale(0%);
 }
 
-.gallery-item:nth-child(1) { grid-column: 1 / 8; grid-row: 1 / 3; }
-.gallery-item:nth-child(2) { grid-column: 8 / 13; grid-row: 1 / 2; }
-.gallery-item:nth-child(3) { grid-column: 8 / 13; grid-row: 2 / 4; }
-.gallery-item:nth-child(4) { grid-column: 1 / 5; grid-row: 3 / 4; }
-.gallery-item:nth-child(5) { grid-column: 5 / 8; grid-row: 3 / 4; }
-
 /* Contact Section */
 .contact-container {
 text-align: center;
-padding-bottom: 8rem;
+padding-bottom: clamp(3rem, 6vh, 5rem);
 }
 
 .contact-text {
@@ -254,27 +568,136 @@ margin-bottom: 1rem;
 opacity: 0.7;
 }
 
+.newsletter-signup {
+max-width: 700px;
+margin: 0 auto 2.5rem;
+padding: 1.4rem;
+border: 1px solid rgba(255, 255, 255, 0.12);
+background: rgba(17, 17, 17, 0.55);
+}
+
+.newsletter-title {
+font-size: clamp(1.1rem, 3vw, 1.6rem);
+letter-spacing: 0.08em;
+margin-bottom: 0.3rem;
+}
+
+.newsletter-copy {
+font-size: clamp(1rem, 2vw, 1.2rem);
+opacity: 0.8;
+margin-bottom: 1rem;
+}
+
+.newsletter-form {
+display: flex;
+flex-wrap: wrap;
+gap: 0.75rem;
+justify-content: center;
+}
+
+.newsletter-form input {
+flex: 1 1 260px;
+max-width: 420px;
+padding: 0.85rem 1rem;
+border: 1px solid rgba(255, 255, 255, 0.35);
+background: rgba(10, 10, 10, 0.9);
+color: var(--color-text);
+font-family: var(--font-body);
+font-size: 1.05rem;
+}
+
+.newsletter-form input::placeholder {
+color: rgba(232, 227, 223, 0.6);
+}
+
+.newsletter-form input:focus {
+outline: none;
+border-color: var(--color-accent);
+}
+
+.newsletter-form button {
+padding: 0.85rem 1.3rem;
+border: 1px solid var(--color-text);
+background: transparent;
+color: var(--color-text);
+font-family: var(--font-display);
+letter-spacing: 0.08em;
+text-transform: uppercase;
+cursor: pointer;
+transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.newsletter-form button:hover {
+background: var(--color-accent);
+color: var(--color-bg);
+border-color: var(--color-accent);
+}
+
+.newsletter-feedback {
+min-height: 1.5em;
+margin-top: 0.8rem;
+font-size: 1rem;
+opacity: 0.85;
+}
+
+.newsletter-feedback.is-error {
+color: var(--color-accent);
+}
+
+.visually-hidden {
+position: absolute;
+width: 1px;
+height: 1px;
+padding: 0;
+margin: -1px;
+overflow: hidden;
+clip: rect(0, 0, 0, 0);
+white-space: nowrap;
+border: 0;
+}
+
 .email-link {
 display: block;
 font-family: var(--font-display);
-font-size: clamp(2rem, 5vw, 5rem);
-color: var(--color-accent);
+font-size: clamp(1.4rem, 5vw, 5rem);
+color: var(--color-text);
 margin-bottom: 4rem;
-word-break: break-all;
+word-break: normal;
+overflow-wrap: normal;
+max-width: 100%;
+line-height: 1.1;
 }
 
 .email-link:hover {
-color: var(--color-text);
+color: var(--color-accent);
 }
 
 .social-links {
 display: flex;
 justify-content: center;
-gap: 3rem;
+flex-wrap: wrap;
+gap: 1.5rem;
 margin-bottom: 4rem;
 font-family: var(--font-display);
 font-size: 1.5rem;
 text-transform: uppercase;
+}
+
+.social-links a {
+display: flex;
+align-items: center;
+justify-content: center;
+transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+color: var(--color-accent);
+transform: translateY(-5px);
+}
+
+.social-links svg {
+width: 28px;
+height: 28px;
 }
 
 .epk-btn {
@@ -327,19 +750,96 @@ transform: translateY(0);
 }
 
 @media (max-width: 992px) {
+
 .bio-container {
 grid-template-columns: 1fr;
-gap: 4rem;
+gap: 0;
+position: relative;
+overflow: hidden;
+min-height: 520px;
+align-items: end;
 }
 
-.gallery-grid {
-display: flex;
-flex-direction: column;
+.bio-container::after {
+content: '';
+position: absolute;
+inset: 0;
+background: linear-gradient(to top, rgba(10, 10, 10, 0.88) 20%, rgba(10, 10, 10, 0.45) 60%, rgba(10, 10, 10, 0.25) 100%);
+z-index: 1;
+}
+
+.bio-section .section-title {
+font-size: clamp(2rem, 10vw, 3rem);
+margin-bottom: 1.5rem;
+}
+
+.bio-image {
+position: absolute;
+inset: 0;
+max-width: none;
+width: 100%;
+height: 100%;
+margin: 0;
+}
+
+.bio-image::before {
+display: none;
+}
+
+.bio-image img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.bio-text {
+position: relative;
+z-index: 2;
+padding: 1.5rem;
+}
+
+.bio-text p {
+color: rgba(232, 227, 223, 0.95);
+}
+
+.visual-carousel {
+grid-template-columns: 1fr;
+}
+
+.carousel-btn {
+display: none;
 }
 
 .social-links {
+flex-direction: row;
+gap: 1.25rem;
+}
+
+.email-link {
+font-size: clamp(1rem, 6vw, 1.8rem);
+}
+
+.newsletter-signup {
+padding: 1rem;
+}
+
+.newsletter-form {
 flex-direction: column;
-gap: 1.5rem;
+align-items: stretch;
+}
+
+.newsletter-form input,
+.newsletter-form button {
+flex: 0 0 auto;
+max-width: none;
+width: 100%;
+}
+}
+
+@media (max-width: 480px) {
+.email-link {
+font-size: clamp(0.92rem, 5.2vw, 1.2rem);
+line-height: 1.08;
 }
 }
 </style>
@@ -362,7 +862,200 @@ observer.unobserve(entry.target);
 }, observerOptions);
 
 document.addEventListener('DOMContentLoaded', () => {
+const vagabundoPopup = document.getElementById('vagabundo-popup');
+const openVagabundoPopup = () => {
+if (!vagabundoPopup) {
+return;
+}
+vagabundoPopup.hidden = false;
+document.body.style.overflow = 'hidden';
+};
+
+const closeVagabundoPopup = () => {
+if (!vagabundoPopup) {
+return;
+}
+vagabundoPopup.hidden = true;
+document.body.style.overflow = '';
+};
+
+document.addEventListener('click', (event) => {
+const target = event.target;
+if (!(target instanceof Element)) {
+return;
+}
+
+const openTrigger = target.closest('[data-open-vagabundo-popup]');
+if (openTrigger) {
+event.preventDefault();
+openVagabundoPopup();
+return;
+}
+
+const closeTrigger = target.closest('[data-close-vagabundo-popup]');
+if (closeTrigger) {
+event.preventDefault();
+closeVagabundoPopup();
+}
+});
+
+window.addEventListener('open-vagabundo-popup', openVagabundoPopup);
+
+document.addEventListener('keydown', (event) => {
+if (event.key === 'Escape') {
+closeVagabundoPopup();
+}
+});
+
 const elements = document.querySelectorAll('.fade-in-scroll');
 elements.forEach(el => observer.observe(el));
+
+const carousel = document.querySelector('.visual-carousel');
+if (carousel) {
+const track = carousel.querySelector('.carousel-track');
+const prevBtn = carousel.querySelector('.carousel-btn-prev');
+const nextBtn = carousel.querySelector('.carousel-btn-next');
+const dotsContainer = carousel.querySelector('.carousel-dots');
+
+if (track && prevBtn && nextBtn && dotsContainer) {
+const slides = Array.from(track.querySelectorAll('.is-slide'));
+const dots = slides.map((_, index) => {
+const dot = document.createElement('span');
+dot.className = 'carousel-dot';
+dot.dataset.index = String(index);
+dotsContainer.appendChild(dot);
+return dot;
+});
+
+let currentIndex = 0;
+let autoplayId;
+let isInteracting = false;
+
+const updateDots = () => {
+dots.forEach((dot, index) => {
+dot.classList.toggle('is-active', index === currentIndex);
+});
+};
+
+const goToSlide = (index) => {
+currentIndex = (index + slides.length) % slides.length;
+track.scrollTo({
+left: slides[currentIndex].offsetLeft,
+behavior: 'smooth'
+});
+updateDots();
+};
+
+const stopAutoplay = () => {
+if (autoplayId) {
+clearInterval(autoplayId);
+autoplayId = undefined;
+}
+};
+
+const startAutoplay = () => {
+stopAutoplay();
+if (slides.length <= 1 || isInteracting || document.hidden) {
+return;
+}
+autoplayId = setInterval(() => {
+goToSlide(currentIndex + 1);
+}, 3000);
+};
+
+const pauseForInteraction = () => {
+isInteracting = true;
+stopAutoplay();
+};
+
+const resumeAfterInteraction = () => {
+isInteracting = false;
+startAutoplay();
+};
+
+prevBtn.addEventListener('click', () => goToSlide(currentIndex - 1));
+nextBtn.addEventListener('click', () => goToSlide(currentIndex + 1));
+
+carousel.addEventListener('mouseenter', pauseForInteraction);
+carousel.addEventListener('mouseleave', resumeAfterInteraction);
+carousel.addEventListener('focusin', pauseForInteraction);
+carousel.addEventListener('focusout', resumeAfterInteraction);
+carousel.addEventListener('touchstart', pauseForInteraction, { passive: true });
+carousel.addEventListener('touchend', resumeAfterInteraction, { passive: true });
+carousel.addEventListener('touchcancel', resumeAfterInteraction, { passive: true });
+
+document.addEventListener('visibilitychange', () => {
+if (document.hidden) {
+stopAutoplay();
+return;
+}
+startAutoplay();
+});
+
+track.addEventListener('scroll', () => {
+const trackCenter = track.scrollLeft + track.clientWidth / 2;
+let nearestIndex = currentIndex;
+let nearestDistance = Infinity;
+
+slides.forEach((slide, index) => {
+const slideCenter = slide.offsetLeft + slide.clientWidth / 2;
+const distance = Math.abs(trackCenter - slideCenter);
+if (distance < nearestDistance) {
+nearestDistance = distance;
+nearestIndex = index;
+}
+});
+
+if (nearestIndex !== currentIndex) {
+currentIndex = nearestIndex;
+updateDots();
+}
+}, { passive: true });
+
+updateDots();
+startAutoplay();
+}
+}
+
+const bioImage = document.querySelector('.bio-image');
+if (bioImage) {
+bioImage.addEventListener('click', () => {
+bioImage.classList.toggle('is-color');
+});
+
+bioImage.addEventListener('keydown', (event) => {
+if (event.key === 'Enter' || event.key === ' ') {
+event.preventDefault();
+bioImage.classList.toggle('is-color');
+}
+});
+}
+
+const newsletterForm = document.getElementById('newsletter-form');
+const newsletterEmailInput = document.getElementById('newsletter-email');
+const newsletterFeedback = document.getElementById('newsletter-feedback');
+
+if (newsletterForm instanceof HTMLFormElement && newsletterEmailInput instanceof HTMLInputElement && newsletterFeedback instanceof HTMLElement) {
+newsletterForm.addEventListener('submit', (event) => {
+event.preventDefault();
+
+const email = newsletterEmailInput.value.trim();
+if (!email || !newsletterEmailInput.validity.valid) {
+newsletterFeedback.textContent = 'Ingresa un correo válido para suscribirte.';
+newsletterFeedback.classList.add('is-error');
+newsletterEmailInput.focus();
+return;
+}
+
+newsletterFeedback.classList.remove('is-error');
+newsletterFeedback.textContent = 'Abriendo tu correo para confirmar la suscripción...';
+
+const subject = encodeURIComponent('Alta newsletter Hugo Buendía');
+const body = encodeURIComponent(`Hola, quiero suscribirme al newsletter.\n\nEmail: ${email}`);
+window.location.href = `mailto:contactohugobuendia@gmail.com?subject=${subject}&body=${body}`;
+
+newsletterForm.reset();
+});
+}
 });
 </script>

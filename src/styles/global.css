@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap');
 
 :root {
   --color-bg: #0a0a0a;
@@ -8,6 +8,7 @@
   
   --font-display: 'Anton', sans-serif;
   --font-body: 'Cormorant Garamond', serif;
+  --font-script: 'Caveat', cursive;
 }
 
 * {
@@ -86,7 +87,7 @@ a:hover {
 }
 
 .section {
-  padding: 8rem 0;
+  padding: clamp(3.5rem, 7vh, 5.5rem) 0;
 }
 
 /* Animations */
