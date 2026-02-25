@@ -2,7 +2,7 @@
 dist/
 # generated types
 .astro/
-.github/
+.github/skills/
 
 # dependencies
 node_modules/
