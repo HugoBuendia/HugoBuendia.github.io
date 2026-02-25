@@ -3,20 +3,42 @@ import '../styles/global.css';
 
 interface Props {
 	title: string;
+	description?: string;
+	image?: string;
 }
 
-const { title } = Astro.props;
+const {
+	title,
+	description = 'Hugo Buendia',
+	image = '/gallery/Paula_Agari_DSC_9820.webp',
+} = Astro.props;
+
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
+const previewImage = new URL(image, Astro.site).toString();
 ---
 
 <!doctype html>
 <html lang="es">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Hugo Buendia - Proyecto Musical" />
+		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="color-scheme" content="dark light" />
 		<meta name="supported-color-schemes" content="dark light" />
 		<link rel="icon" type="image/png" href="/logo_tab.png" />
+		<link rel="canonical" href={canonicalUrl} />
+		<meta property="og:type" content="website" />
+		<meta property="og:locale" content="es_ES" />
+		<meta property="og:site_name" content="Hugo Buendia" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:url" content={canonicalUrl} />
+		<meta property="og:image" content={previewImage} />
+		<meta property="og:image:alt" content="Hugo Buendia" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={previewImage} />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
